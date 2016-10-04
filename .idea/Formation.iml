@@ -61,8 +61,26 @@
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/phpunit-mock-objects" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
@@ -79,6 +97,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/symfony" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
@@ -97,8 +116,26 @@
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/vendor/phpunit/phpunit-mock-objects" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
@@ -115,6 +152,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/symfony" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
         </SOURCES>
       </library>
     </orderEntry>

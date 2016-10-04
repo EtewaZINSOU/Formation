@@ -56,8 +56,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#gsdk">Home</a></li>
                             <li><a href="#gsdk">Categories</a></li>
-                            <li><a href="components.html" data-toggle="tooltip" data-placement="bottom" title="Contactez-moi">Contact</a></li>
-
+                            <li><a data-toggle="modal" data-target="#myModal" title="Contactez-moi"><i class="material-icons">contact_mail</i></a></li>
                             <li><a href="http://www.creative-tim.com/product/get-shit-done-kit">Register</a></li>
                         </ul>
                 </div><!-- /.navbar-collapse -->
@@ -117,6 +116,7 @@
             <script src="{{ asset('js/material-kit.js') }}"></script>
             <!--  Plugins -->
         {% endblock %}
+        {% include 'components/contact.html.twig' %}
     </body>
 
 
