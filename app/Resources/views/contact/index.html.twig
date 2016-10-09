@@ -1,0 +1,103 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+    <h1>Contact list</h1>
+
+    {#<table>#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<th>Name</th>#}
+                {#<th>Email</th>#}
+                {#<th>Subject</th>#}
+                {#<th>Body</th>#}
+                {#<th>Actions</th>#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for contact in contacts %}#}
+            {#<tr>#}
+                {#<td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>#}
+                {#<td>{{ contact.name }}</td>#}
+                {#<td>{{ contact.email }}</td>#}
+                {#<td>{{ contact.subject }}</td>#}
+                {#<td>{{ contact.body }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+
+
+    <div class="divider-new">
+        <h2 class="h2-responsive wow fadeInUp">Contact us</h2>
+    </div>
+
+    <!--Section: Contact-->
+    <section id="contact">
+        <div class="row">
+            <!--First column-->
+            <div class="col-md-8">
+                <div id="map-container" class="z-depth-1 wow fadeInUp">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyD-KmVpPjvyP2JN3mYZmHaI3GlUxRfBTqg'></script>
+                    <div style='overflow:hidden;height:400px;width:600px;'>
+                        <div id='gmap_canvas' style='height:400px;width:600px;'></div>
+                        <style>
+                            #gmap_canvas img {
+                                max-width: none !important;
+                                background: none !important
+                            }
+                        </style>
+                    </div>
+                    <a href='http://mapswebsite.net/fr'>http://mapswebsite.net/fr</a>
+                    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=8639ad73becb600fd647df77dcbd0c2cd5442cd7'></script>
+                    <script type='text/javascript'>function init_map() {
+                            var myOptions = {
+                                zoom: 12,
+                                center: new google.maps.LatLng(49.048906, 2.035402999999974),
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                            };
+                            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                            marker = new google.maps.Marker({
+                                map: map,
+                                position: new google.maps.LatLng(49.048906, 2.035402999999974)
+                            });
+                            infowindow = new google.maps.InfoWindow({content: '<strong>Address</strong><br>31 Rue de l\'Aven<br>95800 Cergy<br>'});
+                            google.maps.event.addListener(marker, 'click', function () {
+                                infowindow.open(map, marker);
+                            });
+                            infowindow.open(map, marker);
+                        }
+                        google.maps.event.addDomListener(window, 'load', init_map);</script>
+                </div>
+            </div>
+            <!--/First column-->
+
+            <!--Second column-->
+            <div class="col-md-4">
+                <ul class="text-xs-center">
+                    <li class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-map-marker"></i>
+                        <p>31 Rue de l' Aven, France</p>
+                    </li>
+
+                    <li class="wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-phone"></i>
+                        <p>+ 33 6 52 54 98 59</p>
+                    </li>
+
+                    <li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-envelope"></i>
+                        <p>etewa.zinsou@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <!--/Second column-->
+        </div>
+    </section>
+    <!--Section: Contact-->
+
+    
+{% endblock %}

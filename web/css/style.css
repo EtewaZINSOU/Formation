@@ -1,151 +1,96 @@
-.full {
-    width: 100%;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
-.gap {
-    height: 30px;
-    width: 100%;
-    clear: both;
-    display: block;
+
+main {
+    flex: 1 0 auto;
 }
-.footer {
-    background: #07030B;
-    height: auto;
-    padding-bottom: 30px;
-    position: relative;
-    width: 100%;
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #DDDDDD;
+
+.btn-floating.btn-small,
+.btn-floating.wishlist,
+.card .card-share
+.social-reveal
+.btn-floating {
+    height: 47px;
+    width: 47px;
+    line-height: 0;
+    margin: 10px;
 }
-.footer p {
-    margin: 0;
-}
-.footer img {
-    max-width: 100%;
-}
-.footer h3 {
-    border-bottom: 1px solid #BAC1C8;
-    color: #54697E;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 27px;
-    padding: 40px 0 10px;
-    text-transform: uppercase;
-}
-.footer ul {
-    font-size: 13px;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 15px;
-    color: #7F8C8D;
-}
-.footer ul li a {
-    padding: 0 0 5px 0;
-    display: block;
-}
-.footer a {
-    color: #78828D
-}
-.supportLi h4 {
-    font-size: 20px;
-    font-weight: lighter;
-    line-height: normal;
-    margin-bottom: 0 !important;
-    padding-bottom: 0;
-}
-.newsletter-box input#appendedInputButton {
-    background: #FFFFFF;
-    display: inline-block;
-    float: left;
-    height: 30px;
-    clear: both;
-    width: 100%;
-}
-.newsletter-box .btn {
-    border: medium none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
-    border-radius: 3px;
-    display: inline-block;
-    height: 40px;
-    padding: 0;
-    width: 100%;
-    color: #fff;
-}
-.newsletter-box {
-    overflow: hidden;
-}
-.bg-gray {
-    background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
-    box-shadow: 0 1px 0 #B4B3B3;
-}
-.social li {
-    background: none repeat scroll 0 0 #B5B5B5;
-    border: 2px solid #B5B5B5;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    float: left;
-    height: 36px;
-    line-height: 36px;
-    margin: 0 8px 0 0;
-    padding: 0;
+.btn-floating i{
     text-align: center;
-    width: 36px;
-    transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
+    font-size: 3.6rem;
 }
-.social li:hover {
-    transform: scale(1.15) rotate(360deg);
-    -webkit-transform: scale(1.1) rotate(360deg);
-    -moz-transform: scale(1.1) rotate(360deg);
-    -ms-transform: scale(1.1) rotate(360deg);
-    -o-transform: scale(1.1) rotate(360deg);
-}
-.social li a {
-    color: #EDEFF1;
-}
-.social li:hover {
-    border: 2px solid #2c3e50;
-    background: #2c3e50;
-}
-.social li a i {
-    font-size: 16px;
-    margin: 0 0 0 5px;
-    color: #EDEFF1 !important;
-}
-.footer-bottom {
-    background: #E3E3E3;
-    border-top: 1px solid #DDDDDD;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.footer-bottom p.pull-left {
-    padding-top: 6px;
-}
-.payments {
-    font-size: 1.5em;
-}
-/** Partie ajoutée  ***/
-.main-raised {
-    height: 1200px;
-    border: 1px solid #9C27B0;
-    margin: -60px 30px 0px;
-    border-radius: 10px;
-    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+.circle{
+    border-radius: 50%;
+    margin: 0.15em;
+    font-size: 3em;
 }
 
-.index-page .wrapper > .header{
+.fa-twitter{
+    background: #4099FF;
+    color: #FFFFFF;
+    padding: 0.05em 0.07em;
+}
+
+.fa-google-plus{
+    color: #FFFFFF;
+    background: #dd4b39;
+    padding: 0.1em 0.1em;
+}
+
+.fa-dribbble{
+    color: #ea4c89;
+}
+
+.fa-pinterest{
+    color: #cb2027;
+}
+
+.fa-facebook{
+    background: #3B5998;
+    color: #FFFFFF;
+    padding: 0.05em 0.3em;
+}
+
+.fa-youtube{
+    background: #bb0000;
+    color: #FFFFFF;
+    padding: 0.25em 0.25em;
 
 }
 
-.wrapper .brand{
-    margin-top: 50px;
+html,
+body,
+header,
+.view {
+    height: 100%;
 }
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+
+/*Intro*/
+.view {
+    /*background: url("http://mdbootstrap.com/images/regular/city/img%20(20).jpg")no-repeat center center fixed;*/
+    background: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+

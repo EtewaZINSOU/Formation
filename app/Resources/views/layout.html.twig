@@ -1,103 +1,160 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8" />
-        {#<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">#}
-        {#<link rel="icon" type="image/png" href="assets/img/favicon.png">#}
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <!--     Fonts and icons     -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
+        {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />#}
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
         <title>{% block title %}Blog{% endblock %}</title>
 
         {% block stylesheets %}
-            <!-- CSS Files -->
-            <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/material-kit.css') }}" rel="stylesheet" />
-
-            <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
-            <!--     Fonts and icons     -->
-            <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet"/>
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-           {% endblock %}
+            <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
+            <link href="{{ asset('css/mdb.css') }}" rel="stylesheet" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
 
     <!-- Navbar -->
     <body class="index-page">
-        <!-- Navbar -->
-        <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+        {#<!-- Navbar -->#}
+        {#<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">#}
+            {#<div class="container">#}
+                {#<div class="navbar-header">#}
+                    {#<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">#}
+                        {#<span class="sr-only">Toggle navigation</span>#}
+                        {#<span class="icon-bar"></span>#}
+                        {#<span class="icon-bar"></span>#}
+                        {#<span class="icon-bar"></span>#}
+                    {#</button>#}
+                    {#<a href="http://www.creative-tim.com">#}
+                        {#<div class="logo-container">#}
+                            {#<div class="logo">#}
+                                {#<img src="{{ asset('images/new_logo.png') }}" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">#}
+                            {#</div>#}
+                            {#<div class="brand">#}
+                                {#Creative Tim#}
+                            {#</div>#}
+
+
+                        {#</div>#}
+                    {#</a>#}
+                {#</div>#}
+                        {#<!-- Collect the nav links, forms, and other content for toggling -->#}
+                {#<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">#}
+                        {#<ul class="nav navbar-nav navbar-right">#}
+                            {#<li><a href="#gsdk">Home</a></li>#}
+                            {#<li><a href="#gsdk">Categories</a></li>#}
+                            {#<li><a data-toggle="modal" data-target="#myModal" title="Contactez-moi"><i class="material-icons">contact_mail</i></a></li>#}
+                            {#<li><a href="http://www.creative-tim.com/product/get-shit-done-kit">Register</a></li>#}
+                        {#</ul>#}
+                {#</div><!-- /.navbar-collapse -->#}
+            {#</div><!-- /.container-fluid -->#}
+        {#</nav>#}
+        {#<!-- End Navbar -->#}
+        {#<div class="wrapper">#}
+            {#<div class="header header-filter" style="background-image: url('{{ asset('images/bg2.jpeg') }}'); height: 450px">#}
+                {#<div class="container">#}
+                    {#<div class="row">#}
+                        {#<div class="col-md-8 col-md-offset-2">#}
+                            {#<div class="brand">#}
+                                {#<h1>Material Kit.</h1>#}
+                                {#<h3>A Badass Bootstrap UI Kit based on Material Design.</h3>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+
+                {#</div>#}
+            {#</div>#}
+
+            {#<div class="main main-raised">#}
+                {#<div class="section section-basic">#}
+                    {#<div class="container">#}
+                        {#<div class="title">#}
+                            {#<h2>Basic Elements</h2>#}
+                        {#</div>#}
+                     {#</div>#}
+                 {#</div>#}
+             {#</div>#}
+
+        {#</div>#}
+
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
+
+            <!-- Collapse button-->
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+                <i class="fa fa-bars"></i>
+            </button>
+
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="http://www.creative-tim.com">
-                        <div class="logo-container">
-                            <div class="logo">
-                                <img src="{{ asset('images/new_logo.png') }}" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">
-                            </div>
-                            <div class="brand">
-                                Creative Tim
-                            </div>
 
-
-                        </div>
-                    </a>
+                <!--Collapse content-->
+                <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                    <!--Links-->
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('homepage') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('contact_index') }}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    {#<!--Search form-->#}
+                    {#<form class="form-inline">#}
+                        {#<input class="form-control" type="text" placeholder="Search">#}
+                    {#</form>#}
                 </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#gsdk">Home</a></li>
-                            <li><a href="#gsdk">Categories</a></li>
-                            <li><a data-toggle="modal" data-target="#myModal" title="Contactez-moi"><i class="material-icons">contact_mail</i></a></li>
-                            <li><a href="http://www.creative-tim.com/product/get-shit-done-kit">Register</a></li>
-                        </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+                <!--/.Collapse content-->
+
+            </div>
+
         </nav>
-        <!-- End Navbar -->
-        <div class="wrapper">
-            <div class="header header-filter" style="background-image: url('{{ asset('images/bg2.jpeg') }}'); height: 450px">
+        <!--/.Navbar-->
+
+        <!--Mask-->
+        <div class="view">
+            <div class="full-bg-img flex-center">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="brand">
-                                <h1>Material Kit.</h1>
-                                <h3>A Badass Bootstrap UI Kit based on Material Design.</h3>
-                            </div>
-                        </div>
+
+                    <div class="white-text text-xs-center wow fadeInUp">
+                        {#<h2>This Navbar is fixed and transparent</h2>#}
+                        {#<br>#}
+                        {#<h5>It will always stay visible on the top, even when you scroll down</h5>#}
+                        {#<p>Navbar's background will switch from transparent to solid color while scrolling down</p>#}
+                        {#<br>#}
+                        {#<p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>#}
                     </div>
 
                 </div>
             </div>
-
-            <div class="main main-raised">
-                <div class="section section-basic">
-                    <div class="container">
-                        <div class="title">
-                            <h2>Basic Elements</h2>
-                        </div>
-                     </div>
-                 </div>
-             </div>
-
         </div>
+        <!--/.Mask-->
+        </header>
 
-        <div class="container">
-            {% for flash_message in app.session.flashBag.get('success') %}
-                <div class="alert alert-success" role="alert">
-                    {{ flash_message }}
-                </div>
-            {% endfor %}
-            {% block body %}{% endblock %}
-        </div>
+        <main class="p-t-6">
+            <div class="container">
+                {% for flash_message in app.session.flashBag.get('success') %}
+                    <div class="alert alert-success" role="alert">
+                        {{ flash_message }}
+                    </div>
+                {% endfor %}
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+
         <div id="footer">
             {% block footer %}
                 {% include ':components:footer.html.twig' %}
@@ -106,33 +163,20 @@
 
         {% block javascripts %}
             <!--   Core JS Files   -->
-            <script src="{{ asset('js/jquery-1.10.2.js') }}"></script>
+            <script src="{{ asset('js/jquery-2.2.3.js') }}"></script>
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-            <script src="{{ asset('js/material.min.js') }}"></script>
+            <script src="{{ asset('js/mdb.min.js') }}"></script>
 
             <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-            <script src="{{ asset('js/nouislider.min.js') }}"></script>
-            <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
-            <script src="{{ asset('js/material-kit.js') }}"></script>
+            <script src="{{ asset('js/tether.min.js') }}"></script>
             <!--  Plugins -->
         {% endblock %}
-        {% include 'components/contact.html.twig' %}
     </body>
 
 
-    {#<script type="text/javascript">#}
+    <script type="text/javascript">
 
-        {#$().ready(function(){#}
-            {#// the body of this function is in assets/material-kit.js#}
-            {#materialKit.initSliders();#}
-            {#window_width = $(window).width();#}
-
-            {#if (window_width >= 992){#}
-                {#big_image = $('.wrapper > .header');#}
-
-                {#$(window).on('scroll', materialKitDemo.checkScrollForParallax);#}
-            {#}#}
-
-        {#});#}
-    {#</script>#}
+        $().ready(function(){
+        });
+    </script>
 </html>
