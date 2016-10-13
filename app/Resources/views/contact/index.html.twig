@@ -1,83 +1,40 @@
 {% extends 'layout.html.twig' %}
 {% block body %}
-    <h1>Contact list</h1>
-
-    {#<table>#}
-        {#<thead>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<th>Name</th>#}
-                {#<th>Email</th>#}
-                {#<th>Subject</th>#}
-                {#<th>Body</th>#}
-                {#<th>Actions</th>#}
-            {#</tr>#}
-        {#</thead>#}
-        {#<tbody>#}
-        {#{% for contact in contacts %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>#}
-                {#<td>{{ contact.name }}</td>#}
-                {#<td>{{ contact.email }}</td>#}
-                {#<td>{{ contact.subject }}</td>#}
-                {#<td>{{ contact.body }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
+    {{ form_start(contact, {'attr': {'class': 'form-horizontal'}}) }}
+    {{ form_errors(contact) }}
 
     <div class="divider-new">
         <h2 class="h2-responsive wow fadeInUp">Contact us</h2>
     </div>
-
-
-    <!--Naked Form-->
     <div class="card-block">
-
-        <!--Header-->
         <div class="text-xs-center">
             <h3><i class="fa fa-envelope"></i> Write to us:</h3>
             <hr class="m-t-2 m-b-2">
         </div>
-
-        <!--Body-->
-        <p>We'll write rarely, but only the best content.</p>
-        <br>
-
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="md-form">
                     <i class="fa fa-user prefix"></i>
-                    <input type="text" id="form3" class="form-control">
-                    <label for="form3">Your name</label>
+                    {{ form_widget(contact.name,{'attr': {'class': 'form-control'}}) }}
+                    <label for="contact_name">Your name</label>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="md-form">
                     <i class="fa fa-envelope prefix"></i>
-                    <input type="text" id="form2" class="form-control">
-                    <label for="form2">Your email</label>
+                    {{ form_widget(contact.email,{'attr': {'class': 'form-control'}}) }}
+                    <label for="contact_email">Your email</label>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="md-form">
                     <i class="fa fa-tag prefix"></i>
-                    <input type="text" id="form34" class="form-control">
-                    <label for="form34">Subject</label>
+                    {{ form_widget(contact.subject,{'attr': {'class': 'form-control'}}) }}
+                    <label for="contact_subject">Subject</label>
                 </div>
             </div>
         </div>
@@ -86,16 +43,14 @@
             <div class="col-md-6 offset-md-3">
                 <div class="md-form">
                     <i class="fa fa-pencil prefix"></i>
-                    <textarea type="text" id="form8" class="md-textarea"></textarea>
-                    <label for="form8">Your message</label>
+                    {{ form_widget(contact.body,{'attr': {'class': 'md-textarea'}}) }}
+                    <label for="contact_body">Your message</label>
                 </div>
             </div>
         </div>
-
-
-
+        {{ form_row(contact._token) }}
         <div class="text-xs-center">
-            <i class="fa fa-paper-plane"></i><button class="btn btn-default">Envoyer</button>
+            <button class="btn btn-default"><i class="fa fa-paper-plane prefix"></i>  Envoyer</button>
             <div class="call">
                 <br>
                 <p>Or would you prefer to call me?
@@ -103,11 +58,8 @@
                     <span><i class="fa fa-phone "> </i></span>+ 33 6 52 54 98 59</p>
             </div>
         </div>
+        {{ form_end(contact,  {'render_rest': false}) }}
     </div>
-    <!--Naked Form-->
-
-
-    <!--Section: Contact-->
     <section id="contact">
         <div class="row">
             <!--First column-->
@@ -163,10 +115,6 @@
                     </li>
                 </ul>
             </div>
-            <!--/Second column-->
         </div>
     </section>
-    <!--Section: Contact-->
-
-    
 {% endblock %}
