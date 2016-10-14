@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        {#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />#}
         {#<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">#}
         <title>{% block title %}Blog{% endblock %}</title>
 
@@ -21,69 +22,6 @@
 
     <!-- Navbar -->
     <body class="index-page">
-        {#<!-- Navbar -->#}
-        {#<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">#}
-            {#<div class="container">#}
-                {#<div class="navbar-header">#}
-                    {#<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">#}
-                        {#<span class="sr-only">Toggle navigation</span>#}
-                        {#<span class="icon-bar"></span>#}
-                        {#<span class="icon-bar"></span>#}
-                        {#<span class="icon-bar"></span>#}
-                    {#</button>#}
-                    {#<a href="http://www.creative-tim.com">#}
-                        {#<div class="logo-container">#}
-                            {#<div class="logo">#}
-                                {#<img src="{{ asset('images/new_logo.png') }}" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">#}
-                            {#</div>#}
-                            {#<div class="brand">#}
-                                {#Creative Tim#}
-                            {#</div>#}
-
-
-                        {#</div>#}
-                    {#</a>#}
-                {#</div>#}
-                        {#<!-- Collect the nav links, forms, and other content for toggling -->#}
-                {#<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">#}
-                        {#<ul class="nav navbar-nav navbar-right">#}
-                            {#<li><a href="#gsdk">Home</a></li>#}
-                            {#<li><a href="#gsdk">Categories</a></li>#}
-                            {#<li><a data-toggle="modal" data-target="#myModal" title="Contactez-moi"><i class="material-icons">contact_mail</i></a></li>#}
-                            {#<li><a href="http://www.creative-tim.com/product/get-shit-done-kit">Register</a></li>#}
-                        {#</ul>#}
-                {#</div><!-- /.navbar-collapse -->#}
-            {#</div><!-- /.container-fluid -->#}
-        {#</nav>#}
-        {#<!-- End Navbar -->#}
-        {#<div class="wrapper">#}
-            {#<div class="header header-filter" style="background-image: url('{{ asset('images/bg2.jpeg') }}'); height: 450px">#}
-                {#<div class="container">#}
-                    {#<div class="row">#}
-                        {#<div class="col-md-8 col-md-offset-2">#}
-                            {#<div class="brand">#}
-                                {#<h1>Material Kit.</h1>#}
-                                {#<h3>A Badass Bootstrap UI Kit based on Material Design.</h3>#}
-                            {#</div>#}
-                        {#</div>#}
-                    {#</div>#}
-
-                {#</div>#}
-            {#</div>#}
-
-            {#<div class="main main-raised">#}
-                {#<div class="section section-basic">#}
-                    {#<div class="container">#}
-                        {#<div class="title">#}
-                            {#<h2>Basic Elements</h2>#}
-                        {#</div>#}
-                     {#</div>#}
-                 {#</div>#}
-             {#</div>#}
-
-        {#</div>#}
-
-
     <header>
         <!--Navbar-->
         <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
@@ -96,7 +34,7 @@
             <div class="container">
 
                 <!--Collapse content-->
-                <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <div class="collapse navbar-toggleable-xs text-center" id="collapseEx">
                     <!--Links-->
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
@@ -109,7 +47,10 @@
                             <a class="nav-link" href="{{ path('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="{{path('cv') }}">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('post_new') }}">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -156,6 +97,8 @@
             <!--   Core JS Files   -->
             <script src="{{ asset('js/jquery-2.2.3.js') }}"></script>
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+            {#<script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>#}
             <script src="{{ asset('js/mdb.min.js') }}"></script>
 
             <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
@@ -165,9 +108,9 @@
     </body>
 
 
-    <script type="text/javascript">
+    {#<script type="text/javascript">#}
 
-        $().ready(function(){
-        });
-    </script>
+        {#$().ready(function(){#}
+        {#});#}
+    {#</script>#}
 </html>

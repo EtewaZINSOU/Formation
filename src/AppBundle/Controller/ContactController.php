@@ -40,4 +40,14 @@ class ContactController extends Controller
             'contact' => $form->createView(),
         ));
     }
+
+    /**
+     * @Route("/cv", name="cv")
+     * @Method({"GET"})
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function cvAction()
+    {
+        return $this->render('cv/index.html.twig');
+    }
 }
