@@ -3,7 +3,6 @@
 {% block body %}
     {{ form_start(form) }}
     {{ form_errors(form) }}
-        {#{{ form_widget(form) }}#}
     <div class="divider-new">
         <h2 class="h2-responsive wow fadeInUp">Creation de post</h2>
     </div>
@@ -81,15 +80,4 @@
     </ul>
 
 {% endblock %}
-
-
-{#{% block javascripts %}#}
-    {#{{ parent() }}#}
-    {#<script type="application/javascript">#}
-        {#$(document).ready(function () {#}
-            {#$('.datepicker').datepicker();#}
-        {#})#}
-    {#</script>#}
-
-{#{% endblock %}#}
 

@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Post
@@ -59,6 +60,7 @@ class Post
     /**
      * @var \DateTime
      *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created", type="datetime")
      */
     private $created;
@@ -66,16 +68,17 @@ class Post
     /**
      * @var \DateTime
      *
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="updated", type="datetime")
      */
     private $updated;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="published", type="datetime")
-     */
-    private $published;
+//    /**
+//     * @var \DateTime
+//     *
+//     * @ORM\Column(name="published", type="datetime")
+//     */
+//    private $published;
 
     /**
      * @var string
@@ -215,19 +218,19 @@ class Post
         return $this->comments;
     }
 
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     *
-     * @return Post
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-
-        return $this;
-    }
+//    /**
+//     * Set created
+//     *
+//     * @param \DateTime $created
+//     *
+//     * @return Post
+//     */
+//    public function setCreated($created)
+//    {
+//        $this->created = $created;
+//
+//        return $this;
+//    }
 
     /**
      * Get created
@@ -239,19 +242,19 @@ class Post
         return $this->created;
     }
 
-    /**
-     * Set updated
-     *
-     * @param \DateTime $updated
-     *
-     * @return Post
-     */
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-
-        return $this;
-    }
+//    /**
+//     * Set updated
+//     *
+//     * @param \DateTime $updated
+//     *
+//     * @return Post
+//     */
+//    public function setUpdated($updated)
+//    {
+//        $this->updated = $updated;
+//
+//        return $this;
+//    }
 
     /**
      * Get updated
@@ -262,30 +265,30 @@ class Post
     {
         return $this->updated;
     }
-
-    /**
-     * Set published
-     *
-     * @param \DateTime $published
-     *
-     * @return Post
-     */
-    public function setPublished($published)
-    {
-        $this->published = $published;
-
-        return $this;
-    }
-
-    /**
-     * Get published
-     *
-     * @return \DateTime
-     */
-    public function getPublished()
-    {
-        return $this->published;
-    }
+//
+//    /**
+//     * Set published
+//     *
+//     * @param \DateTime $published
+//     *
+//     * @return Post
+//     */
+//    public function setPublished($published)
+//    {
+//        $this->published = $published;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get published
+//     *
+//     * @return \DateTime
+//     */
+//    public function getPublished()
+//    {
+//        return $this->published;
+//    }
 
     /**
      * Set author

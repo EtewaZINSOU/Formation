@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\Post;
-use AppBundle\Form\PostType;
+use AppBundle\Form\Type\PostType;
 
 /**
  * Post controller.
@@ -56,7 +56,6 @@ class PostController extends Controller
         }
 
         return $this->render('post/new.html.twig', array(
-//            'post' => $post,
             'form' => $form->createView(),
         ));
     }
@@ -91,7 +90,7 @@ class PostController extends Controller
     public function editAction(Request $request, Post $post)
     {
         $deleteForm = $this->createDeleteForm($post);
-        $editForm = $this->createForm('AppBundle\Form\PostType', $post);
+        $editForm = $this->createForm('AppBundle\Form\Type\PostType', $post);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -99,7 +98,8 @@ class PostController extends Controller
             $em->persist($post);
             $em->flush();
 
-            return $this->redirectToRoute('post_edit', array('id' => $post->getId()));
+//            return $this->redirectToRoute('post_edit', array('id' => $post->getId()));
+            return $this->redirectToRoute('post_index');
         }
 
         return $this->render('post/edit.html.twig', array(

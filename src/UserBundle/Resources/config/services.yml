@@ -1,0 +1,6 @@
+services:
+      blog_user.event_listener.registration_listener:
+          class: UserBundle\EventListener\RegistrationListener
+          arguments: ["@router"]
+          tags:
+             - { name: kernel.event_listener, event: fos_user.registration.success, method: onSuccessRegistration }

@@ -3,7 +3,6 @@
 namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -22,9 +21,6 @@ class PostType extends AbstractType
             ->add('categorie', TextType::class)
             ->add('tags', TextType::class)
             ->add('comments', TextType::class)
-            ->add('created', DateType::class)
-            ->add('updated', DateType::class)
-            ->add('published', DateType::class)
             ->add('author', TextType::class)
         ;
     }

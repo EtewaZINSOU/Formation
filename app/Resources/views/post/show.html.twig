@@ -37,10 +37,10 @@
                 <th>Updated</th>
                 <td>{% if post.updated %}{{ post.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
-            <tr>
-                <th>Published</th>
-                <td>{% if post.published %}{{ post.published|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
+            {#<tr>#}
+                {#<th>Published</th>#}
+                {#<td>{% if post.published %}{{ post.published|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+            {#</tr>#}
             <tr>
                 <th>Author</th>
                 <td>{{ post.author }}</td>

@@ -92,5 +92,22 @@ header,
     background-size: cover;
 }
 
+.card .form-header {
+    color: #fff;
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.card{
+    width: 644px;
+    margin: 50px 20px 0 100px;
+}
 
 

@@ -2,50 +2,52 @@
 
 {% block body %}
     <h1>Post list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Text</th>
-                <th>Categorie</th>
-                <th>Tags</th>
-                <th>Comments</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Published</th>
-                <th>Author</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for post in posts %}
-            <tr>
-                <td><a href="{{ path('post_show', { 'id': post.id }) }}">{{ post.id }}</a></td>
-                <td>{{ post.title }}</td>
-                <td>{{ post.text }}</td>
-                <td>{{ post.categorie }}</td>
-                <td>{{ post.tags }}</td>
-                <td>{{ post.comments }}</td>
-                <td>{% if post.created %}{{ post.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if post.updated %}{{ post.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if post.published %}{{ post.published|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ post.author }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            {#<tr>#}
+                {#<td><a href="{{ path('post_show', { 'id': post.id }) }}">{{ post.id }}</a></td>#}
+                {#<td>{{ post.title }}</td>#}
+                {#<td>{{ post.text }}</td>#}
+                {#<td>{{ post.categorie }}</td>#}
+                {#<td>{{ post.tags }}</td>#}
+                {#<td>{{ post.comments }}</td>#}
+                {#<td>{% if post.created %}{{ post.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+                {#<td>{% if post.updated %}{{ post.updated|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+                {#<td>{{ post.author }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('post_show', { 'id': post.id }) }}">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+
+
+
+            <section class="section extra-margins">
+                <hr>
+                <div class="row">
+                    <div class="col-md-5 m-b-r">
+                        <div class="view overlay hm-white-slight">
+                            <img src="http://mdbootstrap.com/images/regular/city/img%20(32).jpg">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 m-b-r">
+                        <a href="" class="pink-text"><h5><i class="fa fa-suitcase"></i>Travels</h5></a>
+                        <h4>{{ post.title }}.</h4>
+                        <p>{{ post.text }}.</p>
+                        <p>by <a><strong>{{ post.author }}</strong></a>, {% if post.created %}{{ post.created|date('Y-m-d H:i:s') }}{% endif %}</p>
+                        <a class="btn btn-cyan" href="{{ path('post_show', { 'id': post.id }) }}">Read more</a>
+                    </div>
+                </div>
+            </section>
         {% endfor %}
-        </tbody>
-    </table>
 
     <ul>
         <li>
