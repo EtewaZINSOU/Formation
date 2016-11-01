@@ -1,6 +1,8 @@
 <?php
 
 namespace UserBundle\Entity;
+use AppBundle\Entity\Post;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
@@ -34,9 +36,15 @@ class User extends BaseUser
      */
     protected $firstname;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Post", mappedBy="author")
+     */
+    protected $post;
+
     public function __construct()
     {
         parent::__construct();
+        $this->post = new ArrayCollection();
 
     }
 
@@ -99,5 +107,46 @@ class User extends BaseUser
     public function getFirstname()
     {
         return $this->firstname;
+    }
+
+    public function setEmail($email)
+    {
+        parent::setEmail($email);
+        $this->setUsername($email);
+    }
+
+
+    /**
+     * Add post
+     *
+     * @param Post $post
+     *
+     * @return User
+     */
+    public function addPost(Post $post)
+    {
+        $this->post[] = $post;
+
+        return $this;
+    }
+
+    /**
+     * Remove post
+     *
+     * @param Post $post
+     */
+    public function removePost(Post $post)
+    {
+        $this->post->removeElement($post);
+    }
+
+    /**
+     * Get post
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPost()
+    {
+        return $this->post;
     }
 }

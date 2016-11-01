@@ -22,9 +22,7 @@ class LoadPostData extends AbstractFixture implements OrderedFixtureInterface , 
         $faker = Factory::create('fr_FR');
 
         for($i = 1; $i <= self::MAX_NB_BADGES; $i++){
-
             $post = new Post();
-
             $post
                 ->setAuthor($faker->firstName.''. $faker->lastName)
                 ->setTitle($faker->text(10))

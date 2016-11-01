@@ -21,7 +21,7 @@ class RegistrationListener
     {
 
         $event->setResponse(
-            new RedirectResponse($this->router->generate('homepage'))
+            new RedirectResponse($this->router->generate('post_index'))
         );
 
     }

@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\Contact;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Contact controller.
@@ -20,7 +21,7 @@ class ContactController extends Controller
      * @Route("/", name="contact")
      * @Method({"GET", "POST"})
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function indexAction(Request $request)
     {
@@ -44,7 +45,7 @@ class ContactController extends Controller
     /**
      * @Route("/cv", name="cv")
      * @Method({"GET"})
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function cvAction()
     {

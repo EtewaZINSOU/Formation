@@ -1,6 +1,16 @@
+parameters:
+    registration_listener: UserBundle\EventListener\RegistrationListener
+    password_resetting:  UserBundle\EventListener\PasswordResettingListener
+
 services:
       blog_user.event_listener.registration_listener:
-          class: UserBundle\EventListener\RegistrationListener
+          class: '%registration_listener%'
           arguments: ["@router"]
           tags:
              - { name: kernel.event_listener, event: fos_user.registration.success, method: onSuccessRegistration }
+
+      blog_user.password_resetting:
+           class: '%password_resetting%'
+           arguments: ["@router"]
+           tags:
+               - { name: kernel.event_subscriber }

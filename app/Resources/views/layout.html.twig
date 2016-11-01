@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-        {#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />#}
-        {#<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">#}
         <title>{% block title %}Blog{% endblock %}</title>
 
         {% block stylesheets %}
@@ -44,15 +42,39 @@
                             <a class="nav-link" href="#">Features</a>
                         </li>
                         <li class="nav-item">
-                            <i class="fa fa-envelope-o"></i>
-                            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+                            <a class="nav-link" href="{{ path('contact') }}">
+                                <i class="fa fa-envelope"></i> <span class="hidden-sm-down">Contact</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{path('cv') }}">CV</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('post_new') }}">Blog</a>
-                        </li>
+
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="nav-item"><a class="nav-link" href="{{ path('post_index') }}">Blog</a></li>
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
+                                        {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}
+                                    </a>
+                                    <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+
+                                        <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                                    </div>
+                                </li>
+                            {% else %}
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
+                                        S'identifier
+                                    </a>
+                                    <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                                        <a class="nav-link" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        </ul>
                     </ul>
                 </div>
             </div>

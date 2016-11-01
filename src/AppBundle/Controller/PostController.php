@@ -2,12 +2,14 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\Post;
-use AppBundle\Form\Type\PostType;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Post controller.
@@ -39,7 +41,8 @@ class PostController extends Controller
      * @Route("/new", name="post_new")
      * @Method({"GET", "POST"})
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_USER')")
+     * @return RedirectResponse|Response
      */
     public function newAction(Request $request)
     {
@@ -66,7 +69,7 @@ class PostController extends Controller
      * @Route("/{id}", name="post_show")
      * @Method("GET")
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function showAction(Post $post)
     {
@@ -85,7 +88,8 @@ class PostController extends Controller
      * @Method({"GET", "POST"})
      * @param Request $request
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_USER')")
+     * @return RedirectResponse|Response
      */
     public function editAction(Request $request, Post $post)
     {
@@ -98,7 +102,6 @@ class PostController extends Controller
             $em->persist($post);
             $em->flush();
 
-//            return $this->redirectToRoute('post_edit', array('id' => $post->getId()));
             return $this->redirectToRoute('post_index');
         }
 
@@ -116,7 +119,8 @@ class PostController extends Controller
      * @Method("DELETE")
      * @param Request $request
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_USER')")
+     * @return RedirectResponse
      */
     public function deleteAction(Request $request, Post $post)
     {

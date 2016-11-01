@@ -11,8 +11,6 @@ security:
         ROLE_ADMIN:       [ROLE_ADMIN,ROLE_SONATA_ADMIN]
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
-
-
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/

@@ -2,6 +2,7 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
     contact_mailer: AppBundle\Mailer\Mailer
+    timestampable_listener: Gedmo\Timestampable\TimestampableListener
 
 services:
       app.mailer.mailer:
@@ -11,7 +12,7 @@ services:
               - [setContainer, ['@service_container']]
 
       gedmo.listener.timestampable:
-              class: Gedmo\Timestampable\TimestampableListener
+              class: '%timestampable_listener%'
               tags:
                   - { name: doctrine.event_subscriber, connection: default }
               calls:
